@@ -7,7 +7,7 @@ import io.lettuce.core.api.sync.RedisCommands;
 public class LettuceMain {
 
     public static void main(String[] args){
-        RedisClient redisClient = RedisClient.create("redis://password@localhost:32222/0");
+        RedisClient redisClient = RedisClient.create("redis://password@127.0.0.1:32222/0");
         StatefulRedisConnection<String, String> connection = redisClient.connect();
         RedisCommands<String, String> syncCommands = connection.sync();
 
